@@ -1,76 +1,204 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
-<head>
-	<meta charset="UTF-8">
-	<title>Grackets for the COMPETITION CUBE</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>jquery.gracket.js - A JQuery/Canvas approach to creating single elimination tournament brackets</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <!--[if lt IE 9]><script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script><![endif]-->
+    <!--[if lt IE 8]><script type="text/javascript" src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script><![endif]-->
+    <script type="text/javascript" src="js/jquery.gracket.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/gracket.css">
+  </head>
+  <body>
 
-	<!-- basic styles -->
-	<style type="text/css">
-		.g_gracket { width: 9999px; background-color: #fff; padding: 55px 15px 5px; line-height: 100%; position: relative; overflow: hidden;}
-		.g_round { float: left; margin-right: 70px; }
-		.g_game { position: relative; margin-bottom: 15px; }
-		.g_gracket h3 { margin: 0; padding: 10px 8px 8px; font-size: 18px; font-weight: normal; color: #fff}
-		.g_team { background: #3597AE; }
-		.g_team:last-child {  background: #FCB821; }
-		.g_round:last-child { margin-right: 20px; }
-		.g_winner { background: #444; }
-		.g_winner .g_team { background: none; }
-		.g_current { cursor: pointer; background: #A0B43C!important; }
-		.g_round_label { top: -5px; font-weight: normal; color: #CCC; text-align: center; font-size: 18px; }
-	</style>
+    <div class="container-secondary">
+      <div class="wrapper">
+        <div data-gracket='[
+            [
+              [ {"name" : "Team 1", "id" : "team-1", "seed" : 1}, {"name" : "Team 2", "id" : "team-2", "seed" : 2} ],
+              [ {"name" : "Team 3", "id" : "team-3", "seed" : 3}, {"name" : "Team 4", "id" : "team-4", "seed" : 4} ],
+              [ {"name" : "Team 5", "id" : "team-5", "seed" : 5}, {"name" : "Team 6", "id" : "team-6", "seed" : 6} ],
+              [ {"name" : "Team 7", "id" : "team-7", "seed" : 7}, {"name" : "Team 8", "id" : "team-8", "seed" : 15} ]
+            ],
+            [
+              [ {"name" : "Team 1", "id" : "team-1", "seed" : 1}, {"name" : "Team 3", "id" : "team-3", "seed" : 5} ],
+              [ {"name" : "Team 5", "id" : "team-5", "seed" : 5}, {"name" : "Team 7", "id" : "team-7", "seed" : 7} ]
+            ],
+            [
+              [ {"name" : "Team 1", "id" : "team-1", "seed" : 1}, {"name" : "Team 5", "id" : "team-5", "seed" : 5} ]
+            ],
+            [
+              [ {"name" : "Team 1", "id" : "team-1", "seed" : 1} ]
+            ]
+          ]'>
+        </div>
+      </div>
+      <div class="wrapper secondary-bracket">
+        <div data-gracket='[ 
+            [ [ {"name" : "Team 7", "id" : "team-7", "seed" : 7}, {"name" : "Team 3", "id" : "team-3", "seed" : 3} ] ],
+            [ [ {"name" : "Team 3", "id" : "team-3", "seed" : 3} ] ]
+          ]'>
+        </div>
+      </div>
+    </div>
 
-	<!-- dependencies -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <div class="games">
 
-	<!-- main lib -->
-	<script type="text/javascript" src="js/jquery.gracket.min.js"></script>
-	<!--<script type="text/javascript" src="js/test.js"></script>-->
+      <table class="table table-bordered" id="quarter-final">
+        <thead>
+          <tr>
+            <th style="width:33%;">Game</th>
+            <th style="width:33%;">Mode</td>
+            <th style="width:33%;">Challenge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Super Smash Bros. Melee</td>
+            <td>Team Melee - 2v2</td>
+            <td>2 wins</td>
+          </tr>
+          <tr>
+            <td>Super Meat Boy</td>
+            <td>Time Trial</td>
+            <td>Quickest run</td>
+          </tr>
+          <tr>
+            <td>Tony Hawk's Pro Skater 4</td>
+            <td>Graffiti - 1v1</td>
+            <td>1 win</td>
+          </tr>
+        </tbody>
+      </table>
 
-</head>
-<body>
+      <table class="table table-bordered" id="semi-final">
+        <thead>
+          <tr>
+            <th style="width:33%;">Game</th>
+            <td style="width:33%;">Mode</td>
+            <th style="width:33%;">Challenge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nidhogg</td>
+            <td>Versus - 1v1</td>
+            <td>1 win</td>
+          </tr>
+          <tr>
+            <td>Street Fighter 2</td>
+            <td>Versus - 1v1</td>
+            <td>1 win (best of 3 fights)</td>
+          </tr>
+          <tr>
+            <td>Super Mario Bros.</td>
+            <td>Time Trial</td>
+            <td>Quickest run</td>
+          </tr>
+        </tbody>
+      </table>
 
-	<!-- empty gracket element -->
-	<div class="my_gracket"></div>
+      <table class="table table-bordered" id="final-final">
+        <thead>
+          <tr>
+            <th style="width:33%;">Game</th>
+            <th style="width:33%;">Mode</td>
+            <th style="width:33%;">Challenge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pacman</td>
+            <td>Score Attack Relay - 1 player / life</td>
+            <td>Highest score</td>
+          </tr>
+          <tr>
+            <td>Goldeneye 007</td>
+            <td>Licence to Kill - 1v1 - Facility</td>
+            <td>2 wins</td>
+          </tr>
+          <tr>
+            <td>Super Monkey Ball</td>
+            <td>Blindfold Challange - Diamond</td>
+            <td>Quickest run</td>
+          </tr>
+        </tbody>
+      </table>
 
-	<script type="text/javascript">
-		(function(win, doc, $){
-			
-			console.warn("Make sure the min-width of the .gracket_h3 element is set to width of the largest name/player. Gracket needs to build its canvas based on the width of the largest element. We do this my giving it a min width. I'd like to change that!");
+      <table class="table table-bordered" id="consolation-final">
+        <thead>
+          <tr>
+            <th style="width:33%;">Game</th>
+            <td style="width:33%;">Mode</td>
+            <th style="width:33%;">Challenge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pacapong</td>
+            <td>Versus  - 1v1</td>
+            <td>2 wins</td>
+          </tr>
+        </tbody>
+      </table>
 
-			// Fake Data
-			win.TestData = [
-				[
-					[ {"name" : "Mario Mario", "id" : "mario-mario", "seed" : 1, "displaySeed": "1" }, {"name" : "Luigi Mario", "id" : "luigi-mario", "seed" : 2} ],
-					[ {"name" : "Dr. Robotnik", "id" : "dr-robotnik", "seed" : 3}, {"name" : "Miles Prower", "id" : "miles-prower", "seed" : 4}],
-					[ {"name" : "John 117", "id" : "john-117", "seed" : 5}, {"name" : "THE FLOOD", "id" : "the-flood", "seed" : 6} ],
-					[ {"name" : "Ryu", "id" : "ryu", "seed" : 7}, {"name" : "Ken", "id" : "ken", "seed" : 8}],
-					[ {"name" : "Pac Man", "id" : "pac-man", "seed" : 9}, {"name" : "Blinky", "id" : "blinky", "seed" : 10} ],
-					[ {"name" : "White Spy", "id" : "white-spy", "seed" : 1}, {"name" : "Black Spy", "id" : "black-spy", "seed" : 12}],
-					[ {"name" : "Proto Man", "id" : "proto-man", "seed" : 13}, {"name" : "Mega Man", "id" : "mega-man", "seed" : 14} ],
-					[ {"name" : "Cloud Strife", "id" : "cloud-strife", "seed" : 15}, {"name" : "Sephiroth", "id" : "sephiroth", "seed" : 16}]
-				], 
-				[
-					[ {"name" : "Mario Mario", "id" : "mario-mario", "seed" : 1}, {"name" : "Dr. Robotnik", "id" : "dr-robotnik", "seed" : 3} ],
-					[ {"name" : "John 117", "id" : "john-117", "seed" : 5}, {"name" : "Ken", "id" : "ken", "seed" : 8} ],
-					[ {"name" : "Blinky", "id" : "blinky", "seed" : 10}, {"name" : "Black Spy", "id" : "black-spy", "seed" : 12} ],
-					[ {"name" : "Mega Man", "id" : "mega-man", "seed" : 14}, {"name" : "Cloud Strife", "id" : "cloud-strife", "seed" : 15} ]
-				],
-				[
-					[ {"name" : "Mario Mario", "id" : "mario-mario", "seed" : 1}, {"name" : "John 117", "id" : "john-117", "seed" : 5} ],
-					[ {"name" : "Blinky", "id" : "blinky", "seed" : 10}, {"name" : "Mega Man", "id" : "mega-man", "seed" : 14} ]
-				],
-				[
-					[ {"name" : "Mario Mario", "id" : "mario-mario", "seed" : 1}, {"name" : "Blinky", "id" : "blinky", "seed" : 10} ]
-				],
-				[
-					[ {"name" : "Mario Mario", "id" : "mario-mario", "seed" : 1} ]
-				]
-			];
+    </div>
 
-			// initializer
-			$(".my_gracket").gracket({ src : win.TestData });
 
-		})(window, document, jQuery);
-	</script>
-</body>
+    <script type="text/javascript"> 
+
+      // excanvas does not like radius ):
+      var isIE = ($.browser.msie && parseInt($.browser.version) < 9);
+
+      // init on data-gracket
+      $("[data-gracket]").eq(0).gracket({
+        cornerRadius : (isIE ? 0 : 15),
+        canvasLineGap : 15,
+        roundLabels : ["QUARTER FINAL", "SEMI FINAL", "GRAND FINAL"]
+      }); 
+
+      // init on data-gracket
+      $("[data-gracket]").eq(1).gracket({
+        cornerRadius : (isIE ? 0 : 15),
+        canvasLineGap : 15
+      }); 
+
+      // init on data-gracket
+      $("[data-gracket]").eq(2).gracket({
+        cornerRadius : (isIE ? 0 : 50),
+        canvasLineGap : 0,
+        teamClass : "g_team_custom",
+        gameClass : "g_game_custom",
+        currentClass : "g_current_custom",
+        canvasLineColor : "#444",
+        winnerClass : "g_winner_custom",
+      }); 
+
+      // init on data-gracket
+      $("[data-gracket]").eq(3).gracket({
+        cornerRadius : (isIE ? 0 : 15),
+        canvasLineGap : 15
+      });
+
+      // init on data-gracket
+      $("[data-gracket]").eq(4).gracket({
+        cornerRadius : (isIE ? 0 : 15),
+        canvasLineGap : 15
+      }); 
+
+      // add some labels
+      $(".container-secondary .secondary-bracket .g_winner")
+        .parent()
+        .css("position", "relative")
+        .prepend("<h4>THIRD PLACE :D</h4>")
+
+      $(".container-secondary > div").eq(0).find(".g_winner")
+        .parent()
+        .css("position", "relative")
+        .prepend("<h4>WINNER!!!</h4>")
+
+    </script>
+  </body>
 </html>
