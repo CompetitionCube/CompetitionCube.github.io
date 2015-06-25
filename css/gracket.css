@@ -1,4 +1,5 @@
 body {
+  width: 100%;
   background-image: url(../assets/mario2.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -15,7 +16,7 @@ h1 {
 .wrapper {
   margin: 0;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 0 5px 5px 5px;
 }
 
@@ -25,11 +26,6 @@ a {
 
 a:hover {
   color: #A0B43C;
-}
-
-h1 {
-  font-size: 35px;
-  line-height: 24px;
 }
 
 h1 small {
@@ -62,12 +58,12 @@ body > h3 p, .container-secondary > h3 > p {
 
 /* theme */
 .g_gracket {
-  width: 9999px;
+  width: 1000px;
   /*background-color: #fff;*/
   padding: 55px 15px 5px;
   line-height: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .g_round {
@@ -99,12 +95,12 @@ body > h3 p, .container-secondary > h3 > p {
 }
 
 .g_round_label {
-  top: -5px;
+  top: -10px;
   font-weight: normal;
   color: #000;
   text-align: center;
-  font-size: 22px;
-  padding-left: 10px;
+  font-size: 35px;
+  font-family: 'VT323';
 }
 
 .g_team:last-child {
@@ -133,13 +129,13 @@ body > h3 p, .container-secondary > h3 > p {
 .container-secondary {
   margin-top: 30px;
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
   width: 100%;
 }
 
 .secondary-bracket {
   bottom: 10px;
-  left: 760px;
+  left: 710px;
   position: absolute;
   width: 500px;
 }
@@ -153,6 +149,8 @@ body > h3 p, .container-secondary > h3 > p {
   position: absolute;
   bottom: 65px;
   z-index: 9999;
+  font-size: 35px;
+  font-family: 'VT323';
 }
 
 .secondary-bracket .g_round_label {
@@ -192,13 +190,14 @@ td {
 }
 
 #consolation-final thead {
-  background-color: #EDD7D7;
+  background-color: #EF9999;
+  color: white;
 }
 
 .table-bordered>tbody>tr>td {
-  border: 1px solid #965656 !important;
+  border: 1px solid #000 !important;
 }
 
 .table-bordered>thead>tr>th {
-  border: 1px solid #965656 !important;
+  border: 1px solid #000 !important;
 }
