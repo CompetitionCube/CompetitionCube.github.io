@@ -192,6 +192,10 @@ td {
   color: white;
 }
 
+#consolation-final {
+  margin-bottom: 100px;
+}
+
 #consolation-final thead {
   background-color: #EF9999;
   color: white;
@@ -203,4 +207,15 @@ td {
 
 .table-bordered>thead>tr>th {
   border: 1px solid #000 !important;
+}
+
+.love {
+  padding: 20px;
+}
+
+.love a {
+  color: #B82BCF;
+}
+.love a:hover {
+  text-decoration: underline;
 }
