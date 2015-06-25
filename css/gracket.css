@@ -1,3 +1,17 @@
+body {
+  background-image: url(../assets/mario2.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: 'VT323';
+  font-size: 100px !important;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
 .wrapper {
   margin: 0;
   width: 100%;
@@ -49,7 +63,7 @@ body > h3 p, .container-secondary > h3 > p {
 /* theme */
 .g_gracket {
   width: 9999px;
-  background-color: #fff;
+  /*background-color: #fff;*/
   padding: 55px 15px 5px;
   line-height: 100%;
   position: relative;
@@ -87,7 +101,7 @@ body > h3 p, .container-secondary > h3 > p {
 .g_round_label {
   top: -5px;
   font-weight: normal;
-  color: #ccc;
+  color: #000;
   text-align: center;
   font-size: 22px;
   padding-left: 10px;
@@ -117,6 +131,7 @@ body > h3 p, .container-secondary > h3 > p {
 
 /* secondary-bracket */
 .container-secondary {
+  margin-top: 30px;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -130,7 +145,7 @@ body > h3 p, .container-secondary > h3 > p {
 }
 
 .container-secondary h4 {
-  color: #CCCCCC;
+  /*color: #CCCCCC;*/
   font-weight: normal;
   left: 0;
   margin: 0;
@@ -153,3 +168,37 @@ table {
   margin: 30px auto;
 }
 
+td {
+  background-color: antiquewhite;
+}
+
+#quarter-final {
+  margin-top: 100px;
+}
+
+#quarter-final thead {
+  background-color: #3597AE;
+  color: white;
+}
+
+#semi-final thead {
+  background-color: #FCB821;
+  color: white;
+}
+
+#final-final thead {
+  background-color: #A0B43C;
+  color: white;
+}
+
+#consolation-final thead {
+  background-color: #EDD7D7;
+}
+
+.table-bordered>tbody>tr>td {
+  border: 1px solid #965656 !important;
+}
+
+.table-bordered>thead>tr>th {
+  border: 1px solid #965656 !important;
+}

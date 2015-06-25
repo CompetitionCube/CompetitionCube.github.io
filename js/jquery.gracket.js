@@ -22,7 +22,7 @@
       cornerRadius : 15,
       canvasId : "g_canvas",
       canvasClass : "g_canvas",
-      canvasLineColor : "#eee",
+      canvasLineColor : "#000",
       canvasLineCap : "round",
       canvasLineWidth : 2,
       canvasLineGap : 15,
