@@ -14,8 +14,11 @@ h1 {
 }
 
 .wrapper {
-  margin: 0;
-  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
   overflow: visible;
   border-radius: 0 5px 5px 5px;
 }
@@ -135,8 +138,8 @@ body > h3 p, .container-secondary > h3 > p {
 
 .secondary-bracket {
   bottom: 10px;
-  left: 710px;
-  position: absolute;
+  left: 10%;
+  position: relative;
   width: 500px;
 }
 
