@@ -201,6 +201,11 @@ td {
   color: white;
 }
 
+#heat thead {
+  background-color: #3BBE3B;
+  color: white;
+}
+
 .table-bordered>tbody>tr>td {
   border: 1px solid #000 !important;
 }
@@ -219,5 +224,15 @@ td {
 .love a:hover {
   text-decoration: underline;
 }
-
+button {
+  margin: 0 20px;
+}
+.buttons {
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%
+}
+a.nav{
+  color: white !important;
+}
 

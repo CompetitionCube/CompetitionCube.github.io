@@ -3,213 +3,122 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1">
-    <title>COMPETITION CUBE - FINAL STAGES</title>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <!--[if lt IE 9]><script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script><![endif]-->
-    <!--[if lt IE 8]><script type="text/javascript" src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script><![endif]-->
-    <script type="text/javascript" src="js/jquery.gracket.min.js"></script>
+    <title>COMPETITION CUBE - HEAT STAGES</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/gracket.css">
   </head>
   <body>
 
-    <h1>Competition Cube Knockout Stages</h1>
+  <h1>Competition Cube Heat Games</h1>
 
-    <div class="container-secondary">
-      <div class="wrapper">
-        <div data-gracket='[
-            [
-              [ {"name" : "???", "id" : "team-1", "seed" : 0}, {"name" : "???", "id" : "team-2", "seed" : 0} ],
-              [ {"name" : "???", "id" : "team-3", "seed" : 0}, {"name" : "???", "id" : "team-4", "seed" : 0} ],
-              [ {"name" : "???", "id" : "team-5", "seed" : 0}, {"name" : "???", "id" : "team-6", "seed" : 0} ],
-              [ {"name" : "???", "id" : "team-7", "seed" : 0}, {"name" : "???", "id" : "team-8", "seed" : 0} ]
-            ],
-            [
-              [ {"name" : "???", "id" : "team-1", "seed" : 0}, {"name" : "???", "id" : "team-3", "seed" : 0} ],
-              [ {"name" : "???", "id" : "team-5", "seed" : 0}, {"name" : "???", "id" : "team-7", "seed" : 0} ]
-            ],
-            [
-              [ {"name" : "???", "id" : "team-1", "seed" : 0}, {"name" : "???", "id" : "team-5", "seed" : 0} ]
-            ],
-            [
-              [ {"name" : "???", "id" : "team-1", "seed" : 0} ]
-            ]
-          ]'>
-        </div>
-      </div>
-      <div class="wrapper secondary-bracket">
-        <div data-gracket='[ 
-            [ [ {"name" : "???, "id" : "team-7", "seed" : 0}, {"name" : "???", "id" : "team-3", "seed" : 0} ] ],
-            [ [ {"name" : "???", "id" : "team-3", "seed" : 0} ] ]
-          ]'>
-        </div>
-      </div>
-    </div>
+  <div class="buttons">
+    
+    <button class="btn-lg btn-primary"><a class="nav" href="knockouts.html">Knockouts Round</a></button>
+  </div>
 
-    <h1>GAMES TO BE REVEALED SOON...</h2>
+  <table class="table table-bordered" id="heat">
+    <thead>
+      <tr>
+        <th style="width:33%;">Game 1</th>
+        <th style="width:33%;">Mode</th>
+        <th style="width:33%;">Challenge</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mario Kart 64</td>
+        <td>Race - 4 player</td>
+        <td>1 win</td>
+      </tr>
+    </tbody>
+  </table>
 
-   <!--  <div class="games">
+  <table class="table table-bordered" id="heat">
+    <thead>
+      <tr>
+        <th style="width:33%;">Game</th>
+        <th style="width:33%;">Mode</th>
+        <th style="width:33%;">Challenge</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mount Your Friends</td>
+        <td>Reach the top! - 4 players</td>
+        <td>1 win</td>
+      </tr>
+    </tbody>
+  </table>
 
-      <table class="table table-bordered" id="quarter-final">
-        <thead>
-          <tr>
-            <th style="width:33%;">Game</th>
-            <th style="width:33%;">Mode</td>
-            <th style="width:33%;">Challenge</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Super Smash Bros. Melee</td>
-            <td>Team Melee - 2v2</td>
-            <td>2 wins</td>
-          </tr>
-          <tr>
-            <td>Super Meat Boy</td>
-            <td>Time Trial</td>
-            <td>Quickest run</td>
-          </tr>
-          <tr>
-            <td>Tony Hawk's Pro Skater 4</td>
-            <td>Graffiti - 1v1</td>
-            <td>1 win</td>
-          </tr>
-        </tbody>
-      </table>
+  <table class="table table-bordered" id="heat">
+    <thead>
+      <tr>
+        <th style="width:33%;">Game</th>
+        <th style="width:33%;">Mode</th>
+        <th style="width:33%;">Challenge</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bishi Bashi Special</td>
+        <td>HYPER MODE - 1v1</td>
+        <td>2 qina</td>
+      </tr>
+    </tbody>
+  </table>
 
-      <table class="table table-bordered" id="semi-final">
-        <thead>
-          <tr>
-            <th style="width:33%;">Game</th>
-            <th style="width:33%;">Mode</td>
-            <th style="width:33%;">Challenge</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Nidhogg</td>
-            <td>Versus - 1v1</td>
-            <td>1 win</td>
-          </tr>
-          <tr>
-            <td>Street Fighter 2</td>
-            <td>Versus - 1v1</td>
-            <td>1 win (best of 3 fights)</td>
-          </tr>
-          <tr>
-            <td>Super Mario Bros.</td>
-            <td>Time Trial</td>
-            <td>Quickest run</td>
-          </tr>
-        </tbody>
-      </table>
+  <table class="table table-bordered" id="heat">
+    <thead>
+      <tr>
+        <th style="width:33%;">Game</th>
+        <th style="width:33%;">Mode</th>
+        <th style="width:33%;">Challenge</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Super Monkey Ball</td>
+        <td>Monkey Fight - 4 player</td>
+        <td>2 wins</td>
+      </tr>
+    </tbody>
+  </table>
 
-      <table class="table table-bordered" id="final-final">
-        <thead>
-          <tr>
-            <th style="width:33%;">Game</th>
-            <th style="width:33%;">Mode</td>
-            <th style="width:33%;">Challenge</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Pacman</td>
-            <td>Score Attack Relay - 1 player / life</td>
-            <td>Highest score</td>
-          </tr>
-          <tr>
-            <td>Goldeneye 007</td>
-            <td>Licence to Kill - 1v1 - Facility</td>
-            <td>2 wins</td>
-          </tr>
-          <tr>
-            <td>Super Monkey Ball</td>
-            <td>Blindfold Challange - Diamond</td>
-            <td>Quickest run</td>
-          </tr>
-        </tbody>
-      </table>
+  <table class="table table-bordered" id="heat">
+    <thead>
+      <tr>
+        <th style="width:33%;">Game</th>
+        <th style="width:33%;">Mode</th>
+        <th style="width:33%;">Challenge</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mega Bomberman</td>
+        <td>Battle - 4 player</td>
+        <td>2 wins</td>
+      </tr>
+    </tbody>
+  </table>
 
-      <table class="table table-bordered" id="consolation-final">
-        <thead>
-          <tr>
-            <th style="width:33%;">Game</th>
-            <th style="width:33%;">Mode</td>
-            <th style="width:33%;">Challenge</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Pacapong</td>
-            <td>Versus  - 1v1</td>
-            <td>2 wins</td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div> -->
-
-    <div class="love">Made, with love, by <a href="https://twitter.com/hen_dubz" target="_blank">Henry Oz</a></div>
+  <table class="table table-bordered" id="heat">
+    <thead>
+      <tr>
+        <th style="width:33%;">Game</th>
+        <th style="width:33%;">Mode</th>
+        <th style="width:33%;">Challenge</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Track &amp; Field</td>
+        <td>100m dash - 2v2</td>
+        <td>1 win</td>
+      </tr>
+    </tbody>
+  </table>
 
 
-    <script type="text/javascript"> 
-
-      // excanvas does not like radius ):
-      var isIE = ($.browser.msie && parseInt($.browser.version) < 9);
-
-      // init on data-gracket
-      $("[data-gracket]").eq(0).gracket({
-        cornerRadius : (isIE ? 0 : 15),
-        canvasLineGap : 15,
-        canvasLineColor : "#000",
-        roundLabels : ["QUARTER FINAL", "SEMI FINAL", "GRAND FINAL"]
-      }); 
-
-      // init on data-gracket
-      $("[data-gracket]").eq(1).gracket({
-        cornerRadius : (isIE ? 0 : 15),
-        canvasLineGap : 15,
-        canvasLineColor : "#000"
-      }); 
-
-      // init on data-gracket
-      $("[data-gracket]").eq(2).gracket({
-        cornerRadius : (isIE ? 0 : 50),
-        canvasLineGap : 0,
-        teamClass : "g_team_custom",
-        gameClass : "g_game_custom",
-        currentClass : "g_current_custom",
-        canvasLineColor : "#000",
-        winnerClass : "g_winner_custom",
-      }); 
-
-      // init on data-gracket
-      $("[data-gracket]").eq(3).gracket({
-        cornerRadius : (isIE ? 0 : 15),
-        canvasLineGap : 15
-      });
-
-      // init on data-gracket
-      $("[data-gracket]").eq(4).gracket({
-        cornerRadius : (isIE ? 0 : 15),
-        canvasLineGap : 15
-      }); 
-
-      // add some labels
-      $(".container-secondary .secondary-bracket .g_winner")
-        .parent()
-        .css("position", "relative")
-        .css("color", "#000")
-        .prepend("<h4>3RD PLACE :D</h4>")
-
-      $(".container-secondary > div").eq(0).find(".g_winner")
-        .parent()
-        .css("position", "relative")
-        .css("color", "#000")
-        .prepend("<h4>WINNER!!!</h4>")
-
-    </script>
   </body>
-</html>
+  </html>
